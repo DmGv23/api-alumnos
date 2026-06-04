@@ -17,6 +17,14 @@ functions: #todo lo de adentro seran lambdas
           method: post
           cors: true
           integration: lambda
+  crear: #alias dl lambda
+    handler: CrearAlumno.lambda_handler #nombre de la funcion que incia la logica del lambda
+    events:
+      - http: #existe un apigateway asociado a este lambda 
+          path: /alumnos/crear #sobre este path
+          method: post
+          cors: true
+          integration: lambda
 
 
 
