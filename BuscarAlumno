@@ -1,12 +1,12 @@
-import json
 import boto3
+import json
 
 def lambda_handler(event, context):
 
-    body = json.loads(event['body'])
+    params = event['queryStringParameters']
 
-    tenant_id = body['tenant_id']
-    alumno_id = body['alumno_id']
+    tenant_id = params['tenant_id']
+    alumno_id = params['alumno_id']
 
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table('t_alumnos')
