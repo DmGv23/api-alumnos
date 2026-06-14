@@ -30,7 +30,7 @@ functions: #todo lo de adentro seran lambdas
     events:
       - http:
           path: /alumnos/buscar
-          method: post
+          method: get
           cors: true
           integration: lambda
 
@@ -39,7 +39,7 @@ functions: #todo lo de adentro seran lambdas
     events:
       - http:
           path: /alumnos/modificar
-          method: post
+          method: put
           cors: true
           integration: lambda
 
@@ -48,7 +48,7 @@ functions: #todo lo de adentro seran lambdas
     events:
       - http:
           path: /alumnos/eliminar
-          method: post
+          method: delete
           cors: true
           integration: lambda
 
